@@ -1,0 +1,22 @@
+struct Score
+{
+  int mathScore[2];
+  int physicsScore[2];
+};
+
+int getOverallScore(struct Score score)
+{
+	return score.mathScore[0]+score.mathScore[1]+score.physicsScore[0]+score.physicsScore[1];
+}
+
+int main(){
+  struct Score s;
+  int res;
+  s.mathScore[0] = read();
+  s.mathScore[1] = read();
+  s.physicsScore[0] = read();
+  s.physicsScore[1] = read();
+  res = getOverallScore(s);
+  write(res);
+  return 0;
+}

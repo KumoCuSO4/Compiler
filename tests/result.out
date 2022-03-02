@@ -1,0 +1,4 @@
+java -jar /usr/local/lib/antlr-*-complete.jar -listener -visitor -long-messages ./src/CmmParser.g4 ./src/CmmLexer.g4
+mkdir -p classes
+javac -g -cp /usr/local/lib/antlr-4.9.2-complete.jar:. ./src/CmmParserVisitor.java ./src/CmmLexer.java ./src/Main.java ./src/CmmParserBaseListener.java ./src/CmmParser.java ./src/CmmParserListener.java ./src/CmmParserBaseVisitor.java -d classes
+java -classpath ./classes:/usr/local/lib/antlr-4.9.2-complete.jar Main tests/test1.cmm

@@ -1,0 +1,68 @@
+FUNCTION getOverallScore :
+PARAM score
+t8 := score
+t7 := t8 + #0
+t9 := #0
+t10 := t9 * #4
+t11 := t7 + t10
+t5 := *t11
+t13 := score
+t12 := t13 + #0
+t14 := #1
+t15 := t14 * #4
+t16 := t12 + t15
+t6 := *t16
+t3 := t5 + t6
+t18 := score
+t17 := t18 + #8
+t19 := #0
+t20 := t19 * #4
+t21 := t17 + t20
+t4 := *t21
+t1 := t3 + t4
+t23 := score
+t22 := t23 + #8
+t24 := #1
+t25 := t24 * #4
+t26 := t22 + t25
+t2 := *t26
+t0 := t1 + t2
+RETURN t0
+FUNCTION main :
+DEC s 16
+t29 := &s
+t28 := t29 + #0
+t30 := #0
+t31 := t30 * #4
+t27 := t28 + t31
+READ t32
+*t27 := t32
+t35 := &s
+t34 := t35 + #0
+t36 := #1
+t37 := t36 * #4
+t33 := t34 + t37
+READ t38
+*t33 := t38
+t41 := &s
+t40 := t41 + #8
+t42 := #0
+t43 := t42 * #4
+t39 := t40 + t43
+READ t44
+*t39 := t44
+t47 := &s
+t46 := t47 + #8
+t48 := #1
+t49 := t48 * #4
+t45 := t46 + t49
+READ t50
+*t45 := t50
+t53 := &s
+ARG t53
+t52 := CALL getOverallScore
+res := t52
+t55 := res
+WRITE t55
+t56 := #0
+RETURN t56
